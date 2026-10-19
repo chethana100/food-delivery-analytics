@@ -1,0 +1,39 @@
+product_id,product_name,brand,product_type
+1,Masala Chai,Chai Point Co,Beverages
+2,Cold Coffee,Brew Bros,Beverages
+3,Fresh Lime Soda,Chai Point Co,Beverages
+4,Mango Lassi,Dairy Delight,Beverages
+5,Cola 500ml,Fizz & Co,Beverages
+6,Iced Tea Peach,Brew Bros,Beverages
+7,Sparkling Water,Fizz & Co,Beverages
+8,Cold-Pressed Juice,Green Bowl,Beverages
+9,Classic Veg Burger,Burger Barn,Burgers
+10,Chicken Zinger Burger,Burger Barn,Burgers
+11,Double Patty Burger,Burger Barn,Burgers
+12,Paneer Tikka Burger,Spice Route,Burgers
+13,Mini Burger Trio,Burger Barn,Burgers
+14,Margherita Pizza,Pizza Primo,Pizza
+15,Farmhouse Pizza,Pizza Primo,Pizza
+16,Pepperoni Pizza,Pizza Primo,Pizza
+17,Cheese Burst Pizza,Pizza Primo,Pizza
+18,Family Feast Pizza Box,Pizza Primo,Pizza
+19,Chicken Dum Biryani,Spice Route,Biryani & Mains
+20,Veg Biryani,Spice Route,Biryani & Mains
+21,Butter Chicken Combo,Spice Route,Biryani & Mains
+22,Dal Makhani Bowl,Green Bowl,Biryani & Mains
+23,Party Biryani Handi,Spice Route,Biryani & Mains
+24,French Fries,Burger Barn,Sides
+25,Garlic Bread,Pizza Primo,Sides
+26,Chicken Wings (6),Burger Barn,Sides
+27,Onion Rings,Burger Barn,Sides
+28,Paneer Tikka Starter,Spice Route,Sides
+29,Chocolate Brownie,Sweet Tooth,Desserts
+30,Gulab Jamun (2),Sweet Tooth,Desserts
+31,Ice Cream Tub,Dairy Delight,Desserts
+32,Red Velvet Cake Slice,Sweet Tooth,Desserts
+33,Rasmalai (3),Sweet Tooth,Desserts
+34,Grilled Chicken Salad,Green Bowl,Healthy
+35,Quinoa Power Bowl,Green Bowl,Healthy
+36,Avocado Toast,Green Bowl,Healthy
+37,Protein Smoothie Bowl,Green Bowl,Healthy
+38,Hummus Wrap,Green Bowl,Healthy
