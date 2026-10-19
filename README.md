@@ -135,3 +135,20 @@ table; chart annotations for partial buckets; CI running pytest; AI-narrative la
 Move to PostgreSQL (partitioned by month) or a columnar store; pre-aggregate daily facts by product/customer/area
 and query those; index/cluster on date; cache query results; keep top-N with window functions in SQL rather than
 loading frames into pandas.
+
+---
+
+## Candidate Submission Summary (BRD §16 Template)
+
+| Item | Candidate response |
+|------|--------------------|
+| **Repository / source link** | [https://github.com/chethana100/food-delivery-analytics](https://github.com/chethana100/food-delivery-analytics) |
+| **How to run the application** | `pip install -r requirements.txt && streamlit run app.py` (or Docker: `docker run -p 8501:8501 $(docker build -q .)`) |
+| **Technology stack and why** | **Python + SQLite + Streamlit + Plotly + Pandas**. SQLite provides zero-config relational SQL with views and indexing; Streamlit offers instant reactive dashboards without frontend overhead; Plotly delivers interactive charts; Pandas handles post-SQL data formatting. |
+| **Data model summary** | Relational 3NF: `customers`, `products`, `orders`, `order_items`. Single canonical view `v_item_facts` pre-computes net sales, units, and product cost per non-cancelled line item, eliminating double-counting risks on joins. |
+| **Assumptions made** | Net sales excludes cancelled orders; returns assume restocked inventory; profit is simplified product gross profit (excluding logistics/overhead); zero-sales margins display "N/A"; weeks run Monday–Sunday in IST (`Asia/Kolkata`); ties broken by secondary metric then name A–Z. |
+| **Tests implemented** | 26 automated unit & edge-case tests in `pytest`: cancelled order exclusion, discount/refund effects, division-by-zero guards, loss-making detection, week boundaries crossing year-ends, units-vs-revenue ranking, join multiplication guards, and empty date filters. |
+| **Three insights discovered** | 1. **Loss Leaders:** 6 products sell below cost losing ₹81.9k; Cheese Burst Pizza alone causes −₹29k (−21% margin).<br>2. **Units vs. Revenue disconnect:** French Fries is #1 in volume (1,332 units), but Chicken Dum Biryani drives #1 revenue (₹3.45L) and #1 profit (₹1.65L, 48% margin).<br>3. **Peak concentration:** 51% of net sales occur Friday–Sunday, and 43% originate from just two areas (Indiranagar & Koramangala). |
+| **Known limitations** | Simplified product-level profit ignores delivery/packaging overhead; SQLite is single-node/file-based; customer identities rely on synthetic IDs; no multi-currency support. |
+| **What I would improve next** | Add period-over-period delta comparisons (% change vs prior period), interactive drill-downs (Category → Brand → Product), and materialized daily aggregates for large-scale queries. |
+
